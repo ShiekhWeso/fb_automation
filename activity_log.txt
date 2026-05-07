@@ -1,4 +1,0 @@
-[2026-05-07 19:50:07] --- Script Started ---
-[2026-05-07 19:50:08] Processing Task: Tung Sahur
-[2026-05-07 19:50:16] Attempting to switch to: Tung Sahur
-[2026-05-07 19:50:16] ERROR: Switching failed for Tung Sahur: Locator.click: Target page, context or browser has been closed
