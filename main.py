@@ -1,8 +1,13 @@
+import os
 import time
 import json
 import random
 import datetime
 from playwright.sync_api import sync_playwright
+
+base_path = os.path.dirname(os.path.abspath(__file__))
+user_data_dir = os.path.join(base_path, "user_data")
+tasks_path = os.path.join(base_path, "tasks.json")
 
 def log_event(message):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -24,7 +29,7 @@ def switch_profile(page, profile_name):
         time.sleep(2)
         
         quick_target = page.get_by_text(profile_name, exact=True).first
-        
+
         if quick_target.is_visible():
             quick_target.click()
         else:
@@ -89,7 +94,7 @@ def run_automation():
                     like_btn.click()
                     log_event(f"SUCCESS: Liked for {task['profile_name']}")
                 
-                comment_box = page.get_by_role("textbox", name="Write a comment") or page.get_by_role("textbox", name="اكتب تعليقًا")
+                comment_box = page.get_by_role("textbox", name="Comment as ") or page.get_by_role("textbox", name="تعليق باسم")
                 if comment_box and comment_box.is_visible():
                     comment_box.click()
                     human_type(comment_box, task['comment_text'])
