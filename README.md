@@ -19,7 +19,7 @@ A robust, identity-aware automation tool built with Python and Playwright. This 
 1. Clone the repository:
    ```
    git clone https://github.com/ShiekhWeso/fb_automation.git
-   cd fb-multi-profile-automator
+   cd fb_automation
    ```
 2. Install dependencies:
    ```

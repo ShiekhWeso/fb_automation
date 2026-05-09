@@ -4,4 +4,3 @@ __pycache__/
 *.log
 .dist
 .vscode
-activity_log.txt
