@@ -31,17 +31,8 @@ A robust, identity-aware automation tool built with Python and Playwright. This 
 
 **📋 How to Use**
 1. Configure Tasks
-   Edit the `tasks.json` file to define which accounts should perform which actions:
-   ```
-   [
-    {
-      "profile_name": "Account Name",
-      "post_url": "https://web.facebook.com/photo/...",
-      "comment_text": "Your automated comment here!",
-      "delay": 30
-    }
-   ]
-   ```
+   Edit the `profiles.txt` `post_urls.txt` `comments.txt` files to define which accounts should perform which actions
+
 2. Run the Script
    You can launch the automation via the terminal:
    ```
